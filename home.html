@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate Bangladesh</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+ 
+</head>
+
+
+<body class="bg-gray-100">
+
+  <!-- Header -->
+  <header class="bg-white shadow p-4 flex justify-between items-center">
+    <div class="text-lg font-bold text-green-600">Donate Bangladesh</div>
+    <div class="flex items-center">
+      <button class="btn btn-primary mr-4">Blog</button>
+      <span id="mainBalance" class="font-bold text-yellow-500">5500 BDT</span>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto mt-8">
+    <div class="flex justify-center mb-4">
+      <button class="btn btn-green btn-active">Donation</button>
+      <button class="btn ml-4">History</button>
+    </div>
+
+    <!-- Donation Cards -->
+    <div class="space-y-8">
+
+      <!-- Card 1: Flex Layout -->
+      <div class="card card-bordered bg-white shadow-md p-4 flex flex-col md:flex-row">
+        <figure class="md:w-1/3">
+          <img src="https://via.placeholder.com/400x250" alt="Flood at Noakhali" class="w-full h-auto object-cover">
+        </figure>
+        <div class="card-body md:w-2/3 flex flex-col justify-between">
+          <div>
+            <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
+            <p class="text-gray-700">The recent floods in Noakhali have caused significant damage to homes and infrastructure...</p>
+          </div>
+          <div class="form-control mt-4">
+            <label class="input-group">
+              <span>Amount</span>
+              <input id="donationNoakhali" type="number" placeholder="0 BDT" class="input input-bordered">
+            </label>
+            <button onclick="donate('donationNoakhali', 0)" class="btn btn-green mt-4">Donate Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Flex Layout -->
+      <div class="card card-bordered bg-white shadow-md p-4 flex flex-col md:flex-row">
+        <figure class="md:w-1/3">
+          <img src="https://via.placeholder.com/400x250" alt="Flood Relief in Feni" class="w-full h-auto object-cover">
+        </figure>
+        <div class="card-body md:w-2/3 flex flex-col justify-between">
+          <div>
+            <h2 class="card-title">Donate for Flood Relief in Feni, Bangladesh</h2>
+            <p class="text-gray-700">The recent floods in Feni have devastated local communities...</p>
+          </div>
+          <div class="form-control mt-4">
+            <label class="input-group">
+              <span>Amount</span>
+              <input id="donationFeni" type="number" placeholder="600 BDT" class="input input-bordered">
+            </label>
+            <button onclick="donate('donationFeni', 600)" class="btn btn-green mt-4">Donate Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Flex Layout -->
+      <div class="card card-bordered bg-white shadow-md p-4 flex flex-col md:flex-row">
+        <figure class="md:w-1/3">
+          <img src="https://via.placeholder.com/400x250" alt="Aid for Quota Movement" class="w-full h-auto object-cover">
+        </figure>
+        <div class="card-body md:w-2/3 flex flex-col justify-between">
+          <div>
+            <h2 class="card-title">Aid for Injured in the Quota Movement</h2>
+            <p class="text-gray-700">The recent Quota movement has resulted in numerous injuries...</p>
+          </div>
+          <div class="form-control mt-4">
+            <label class="input-group">
+              <span>Amount</span>
+              <input id="donationQuota" type="number" placeholder="2400 BDT" class="input input-bordered">
+            </label>
+            <button onclick="donate('donationQuota', 2400)" class="btn btn-green mt-4">Donate Now</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div id="donationModal" class="modal hidden">
+    <div class="modal-box bg-white shadow-lg rounded-lg text-center p-6">
+      <h2 class="font-bold text-2xl">Congrats!</h2>
+      <img src="https://via.placeholder.com/50" alt="" class="mx-auto my-4">
+      <p>You have donated for humankind</p>
+      <p class="font-semibold text-green-600">Successfully</p>
+      <button onclick="closeModal()" class="btn btn-outline mt-4">Close Confirmation</button>
+    </div>
+  </div>
+
+  <script src="/js/math.js"></script>
+
+</body>
+</html>
